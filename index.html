@@ -16,13 +16,14 @@
 </head>
 
 <body ng-app="app" >
-<div ng-controller="filmsCtrl"> 
-	<header class="header-catalogo">
-		<div class="ctn">
-			<img src="img/logo-star-wars.png" alt="Logo do Star Wars" title="Logo do Star Wars" class="logo">
-		</div>
-	</header>
 
+<header class="header-catalogo">
+	<div class="ctn">
+		<img src="img/logo-star-wars.png" alt="Logo do Star Wars" title="Logo do Star Wars" class="logo">
+	</div>
+</header>
+
+<div ng-controller="filmsCtrl"> 
 	<div class="ctn">
 		<h1 class="main-ttl">Confira o catálogo completo da franquia Star Wars</h1>
 	</div>
@@ -50,12 +51,14 @@
 			</article>
 		</div>
 	</section>
-	<footer class="footer-catalogo">
-		<div class="ctn">
-			Star Wars - Catálogo Completo
-		</div>
-	</footer>
 </div>
+
+<footer class="footer-catalogo">
+	<div class="ctn">
+		Star Wars - Catálogo Completo
+	</div>
+</footer>
+
 <script src="app/app.js"></script>
 
 <script>
@@ -63,5 +66,6 @@
     $(".header-catalogo").sticky({topSpacing:0});
   });
 </script>
+
 </body>
 </html>
