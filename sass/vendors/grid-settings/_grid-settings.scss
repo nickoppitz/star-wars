@@ -1,0 +1,14 @@
+@import "../neat/neat-helpers"; // or "neat-helpers" when in Rails
+
+// Change the grid settings
+$column: 65px;
+$gutter: 15px;
+$grid-columns: 12;
+$max-width: 1170px;
+
+
+// Bourbon Neat Breakpoints
+$mobile: new-breakpoint(max-width 320px 12);
+$tablet: new-breakpoint(max-width 767px min-width 321px 12);
+$desktop: new-breakpoint(max-width 991px min-width 768px 12);
+$largedesktop: new-breakpoint(min-width 1200px 12);

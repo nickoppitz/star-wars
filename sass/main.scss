@@ -1,0 +1,137 @@
+//Vendors
+
+@import "vendors/vendors";
+
+body{
+	font-family: Roboto;
+	line-height: 25px;
+
+	b{
+		font-weight: 600;
+	}
+}
+
+
+//Container
+.ctn{
+	@include outer-container;
+	padding-left: 30px;
+	padding-right: 30px;
+	
+	@include media($mobile) { // As defined in _grid-settings.scss
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+
+// Header
+.header-catalogo{
+	width: 100%;
+	padding: 20px 0;
+	-webkit-box-shadow: 0px 14px 30px 0px rgba(0,0,0,0.09);
+	-moz-box-shadow: 0px 14px 30px 0px rgba(0,0,0,0.09);
+	box-shadow: 0px 14px 30px 0px rgba(0,0,0,0.09);
+
+	-webkit-transition: all 5ms ease;
+	-moz-transition: all 5ms ease;
+	-ms-transition: all 5ms ease;
+	-o-transition: all 5ms ease;
+	transition: all 5ms ease;
+
+	background-color: #fff;
+
+	.is-sticky &{
+		background-color: #fff;
+	}
+
+	.logo{
+		display: table;
+		margin: 0 auto;
+		width: 50px;
+	}
+}
+
+.main-ttl{
+	margin: 40px 0 20px;
+	font-size: 1.8em;
+	font-weight: 500;
+	text-align: center;
+	color: #545454;
+	line-height: 35px;
+}
+
+.filmes{
+	@include row();
+	padding: 30px 0;
+
+	.filme{
+		@include span-columns(4);
+		@include omega(3n);
+		margin-bottom: 20px;
+		padding: 20px;
+	    height: 605px;
+
+		-webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.09);
+		-moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.09);
+		box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.09);
+
+		@media (max-width: 991px){
+			@include span-columns(6);
+			@include omega(2n);
+		}
+
+		@media (max-width: 650px){
+			@include span-columns(12);
+			@include omega(1n);
+			height: auto;
+		}
+
+		.ttl{
+			font-size: 2.4em;
+			font-weight: 600;
+			line-height: 40px;
+			height: 100px;
+			@media (max-width: 650px){
+				height: auto;
+			}
+		}
+
+		.sub-ttl{
+			font-weight: 600;
+			display: inline-block;
+		}
+
+		.sinopse{
+			margin-bottom: 10px;
+			p{
+				height: 330px;
+				@media (max-width: 650px){
+					height: auto;
+				}
+			}
+		}
+
+		.produtor{
+			height: 40px;
+			@media (max-width: 650px){
+				height: auto;
+			}
+		}
+
+		.episodio,
+		.diretor,
+		.produtor,
+		.lancamento{
+			font-size: 0.9em;
+			line-height: 20px;
+		}
+	}
+}
+
+.footer-catalogo{
+	background-color: #949494;
+	color: #fff;
+	text-align: center;
+	padding: 10px 0;
+}

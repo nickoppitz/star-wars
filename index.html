@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+	<title>Star Wars - Catálogo Completo</title>
+
+	<!-- libs -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="libs/angular.min.js"></script>
+	<script src="libs/jquery.min.js"></script>
+	<script src="libs/jquery.sticky.js"></script>
+</head>
+
+<body ng-app="app" >
+<div ng-controller="filmsCtrl"> 
+	<header class="header-catalogo">
+		<div class="ctn">
+			<img src="img/logo-star-wars.png" alt="Logo do Star Wars" title="Logo do Star Wars" class="logo">
+		</div>
+	</header>
+
+	<div class="ctn">
+		<h1 class="main-ttl">Confira o catálogo completo da franquia Star Wars</h1>
+	</div>
+
+	<section class="filmes">
+		<div class="ctn">
+			<article class="filme" ng-repeat="film in films | orderBy: 'release_date'">
+				<h2 class="ttl">{{ film.title }}</h2>
+				<div class="sinopse">
+					<h3 class="sub-ttl">Sinopse:</h3> 
+					<p>{{ film.opening_crawl }}
+				</div>
+				<div class="episodio">
+					<h3 class="sub-ttl inline">Episódio:</h3> {{ film.episode_id }}
+				</div>
+				<div class="diretor">
+					<h3 class="sub-ttl">Direção:</h3> {{film.director}}
+				</div>
+				<div class="produtor">
+					<h3 class="sub-ttl">Produção:</h3> {{ film.producer }}
+				</div>
+				<div class="lancamento">
+					<h3 class="sub-ttl">Lançamento:</h3> {{ film.release_date | date: "dd/MM/yyyy" }}
+				</div>
+			</article>
+		</div>
+	</section>
+	<footer class="footer-catalogo">
+		<div class="ctn">
+			Star Wars - Catálogo Completo
+		</div>
+	</footer>
+</div>
+<script src="app/app.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $(".header-catalogo").sticky({topSpacing:0});
+  });
+</script>
+</body>
+</html>

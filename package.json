@@ -1,0 +1,23 @@
+{
+  "name": "star-wars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicolas Oppitz",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.6.6",
+    "bourbon-neat": "^1.8.0",
+    "browser-sync": "^2.18.7",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.1",
+    "jquery": "^3.2.1",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "bourbon-neat": "^1.8.0"
+  }
+}
